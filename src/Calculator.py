@@ -1,23 +1,23 @@
 def addition(a, b):
-    c = a + b
-    return c
+    return a + b
 
 
-def substraction(a, b):
-    c = a - b
-    return c
+def subtraction(a, b):
+    return a - b
 
 
 class Calculator:
     result = 0
 
     def __init__(self):
+        x = 2 + 2
+        self.result = x
         pass
 
     def add(self, a, b):
         self.result = addition(a, b)
         return self.result
 
-    def substract(self, a, b):
-        self.result = substraction(a, b)
+    def subtract(self, a, b):
+        self.result = subtraction(a, b)
         return self.result
