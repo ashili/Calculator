@@ -1,3 +1,6 @@
+import math
+
+
 def addition(a, b):
     return a + b
 
@@ -14,12 +17,14 @@ def division(a, b):
     return a / b
 
 
+def squared(a):
+    return a * a
+
+
 class Calculator:
     result = 0
 
     def __init__(self):
-        x = 2 + 2
-        self.result = x
         pass
 
     def add(self, a, b):
@@ -35,5 +40,15 @@ class Calculator:
         return self.result
 
     def divide(self, a, b):
-        self.result = division(a, b)
+        a = float(a)
+        b = float(b)
+        self.result = round(float(division(a, b)), 9)
+        return self.result
+
+    def square(self, a):
+        self.result = squared(a)
+        return self.result
+
+    def radical(self, a):
+        self.result = math.sqrt(a)
         return self.result
