@@ -48,12 +48,12 @@ class MyTestCase(unittest.TestCase):
             self.assertEqual(self.calculator.result, int(row["Result"]))
         print("square Successful")
 
-    # def test_radical(self):
-    #     testData1 = CsvReader('src/csvFiles/Unit Test Division.csv').data
-    #     for row in testData1:
-    #         self.assertEqual(self.calculator.radical(float(row["Value 1"])), float(row["Result"]))
-    #         self.assertEqual(self.calculator.result, float(row["Result"]))
-    #     print("radical Successful")
+    def test_radical(self):
+        testData1 = CsvReader('src/csvFiles/Unit Test Square Root.csv').data
+        for row in testData1:
+            self.assertEqual(self.calculator.radical(float(row["Value 1"])), float(row["Result"]))
+            self.assertEqual(self.calculator.result, float(row["Result"]))
+        print("radical Successful")
 
 
 if __name__ == '__main__':

@@ -50,5 +50,5 @@ class Calculator:
         return self.result
 
     def radical(self, a):
-        self.result = math.sqrt(a)
+        self.result = round(math.sqrt(float(a)), 8)
         return self.result
