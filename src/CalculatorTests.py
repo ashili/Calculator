@@ -14,14 +14,14 @@ class MyTestCase(unittest.TestCase):
         print("self Successful")
 
     def test_add(self):
-        testData = CsvReader('src/Unit Test Addition.csv').data
+        testData = CsvReader('src/csvFiles/Unit Test Addition.csv').data
         for row in testData:
             self.assertEqual(self.calculator.add(int(row["Value 1"]), int(row["Value 2"])), int(row["Result"]))
             self.assertEqual(self.calculator.result, int(row["Result"]))
         print("Add Successful")
 
     def test_subtract(self):
-        testData1 = CsvReader('src/Unit Test Subtraction.csv').data
+        testData1 = CsvReader('src/csvFiles/Unit Test Subtraction.csv').data
         for row in testData1:
             self.assertEqual(self.calculator.subtract(int(row["Value 2"]), int(row["Value 1"])), int(row["Result"]))
             self.assertEqual(self.calculator.result, int(row["Result"]))
